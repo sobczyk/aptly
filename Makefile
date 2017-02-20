@@ -42,6 +42,7 @@ check:
 
 install:
 	$(GOM) build -o $(BINPATH)/aptly
+	$(GOM) build -tags 'opt' -o $(BINPATH)/aptly_opt
 
 system-test: install
 	if [ ! -e ~/aptly-fixture-db ]; then git clone https://github.com/aptly-dev/aptly-fixture-db.git ~/aptly-fixture-db/; fi
